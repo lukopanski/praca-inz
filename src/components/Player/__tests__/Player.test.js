@@ -13,7 +13,7 @@ describe("Player", () => {
     wrapper.unmount();
   });
 
-  test("should render itself", () => {
+  test.concurrent("should render itself", () => {
     expect(wrapper).toBeTruthy();
     expect(wrapper.isVisible()).toBe(true);
   });

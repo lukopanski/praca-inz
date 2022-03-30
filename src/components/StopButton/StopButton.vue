@@ -4,9 +4,9 @@
 
 <script setup>
 import PlayerButton from "@/components/PlayerButton/PlayerButton.vue";
-import usePlayer from "@/composables/player/player";
+// import usePlayer from "@/composables/player/player";
 
-const { player } = usePlayer();
+// const { player } = usePlayer();
 
-const stop = () => player.stop();
+// const stop = () => player.stop();
 </script>

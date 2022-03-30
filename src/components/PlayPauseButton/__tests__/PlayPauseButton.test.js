@@ -13,12 +13,12 @@ describe("PlayPauseButton", () => {
     wrapper.unmount();
   });
 
-  test("should render itself", () => {
+  test.concurrent("should render itself", () => {
     expect(wrapper).toBeTruthy();
     expect(wrapper.isVisible()).toBe(true);
   });
 
-  test("should handle click event", () => {
+  test.concurrent("should handle click event", () => {
     expect(wrapper.trigger("click")).toBeTruthy();
   });
 });

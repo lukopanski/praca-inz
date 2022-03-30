@@ -13,7 +13,7 @@ describe("App", () => {
     wrapper.unmount();
   });
 
-  test("should render itself", () => {
+  test.concurrent("should render itself", () => {
     expect(wrapper).toBeTruthy();
   });
 });

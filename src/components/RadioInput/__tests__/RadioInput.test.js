@@ -21,18 +21,21 @@ describe("RadioInput", () => {
     wrapper.unmount();
   });
 
-  test("should render itself", () => {
+  test.concurrent("should render itself", () => {
     expect(wrapper).toBeTruthy();
     expect(wrapper.isVisible()).toBe(true);
   });
 
-  test("should have radio type input", () => {
+  test.concurrent("should have radio type input", () => {
     expect(wrapper.get('[data-test="radio"]')).toBeTruthy();
   });
 
-  test('should have string value in element with attribute data-test="radio"', () => {
-    expect(wrapper.get('[data-test="radio"]').attributes("value"))
-      .toBeTypeOf("string")
-      .toMatch(note);
-  });
+  test.concurrent(
+    'should have string value in element with attribute data-test="radio"',
+    () => {
+      expect(wrapper.get('[data-test="radio"]').attributes("value"))
+        .toBeTypeOf("string")
+        .toMatch(note);
+    }
+  );
 });

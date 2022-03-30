@@ -3,14 +3,14 @@
 </template>
 
 <script setup>
-import PlayerState from "@/common/enums/PlayerState.js";
+// import PlayerState from "@/common/enums/PlayerState.js";
 import PlayerButton from "@/components/PlayerButton/PlayerButton.vue";
-import usePlayer from "@/composables/player/player.js";
+// import usePlayer from "@/composables/player/player.js";
 
-const { player } = usePlayer();
+// const { player } = usePlayer();
 
 const playPause = () => {
-  const key = player.getPlayState();
-  PlayerState[key.toUpperCase()]();
+  // const key = player.getPlayState();
+  // PlayerState[key.toUpperCase()]();
 };
 </script>
