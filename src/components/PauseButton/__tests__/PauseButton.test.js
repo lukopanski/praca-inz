@@ -1,15 +1,15 @@
 import { shallowMount } from "@vue/test-utils";
 import { afterAll, beforeEach, describe, test } from "vitest";
-import PlayPauseButton from "@/components/PlayPauseButton/PlayPauseButton.vue";
+import PauseButton from "@/components/PauseButton/PauseButton.vue";
 
-describe("PlayPauseButton", () => {
+describe("PauseButton", () => {
   let wrapper;
 
-  beforeEach(async () => {
-    wrapper = shallowMount(PlayPauseButton);
+  beforeEach(() => {
+    wrapper = shallowMount(PauseButton);
   });
 
-  afterAll(async () => {
+  afterAll(() => {
     wrapper.unmount();
   });
 

@@ -1,20 +1,17 @@
-<script setup>
-import Player from "./components/Player/Player.vue";
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-</script>
-
 <template>
   <Player />
+  <Picker />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<script setup>
+import { onBeforeMount } from "vue";
+import Player from "@/components/Player/Player.vue";
+import Picker from "@/components/Picker/Picker.vue";
+import { store } from '@/store/store.js';
+import AIModel from "@/adapters/AIModel/AIModel.js";
+
+onBeforeMount(async () => {
+  store.aiModel = new AIModel();
+  await store.aiModel.initialize();
+})
+</script>

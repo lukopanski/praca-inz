@@ -1,12 +1,12 @@
-import { afterAll, beforeEach, describe, expect, test } from "vitest";
 import { shallowMount } from "@vue/test-utils";
-import Player from "@/components/Player/Player.vue";
+import { afterAll, beforeEach, describe, test } from "vitest";
+import NotePicker from "@/components/NotePicker/NotePicker.vue";
 
-describe("Player", () => {
+describe("NotePicker", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallowMount(Player);
+    wrapper = shallowMount(NotePicker);
   });
 
   afterAll(() => {

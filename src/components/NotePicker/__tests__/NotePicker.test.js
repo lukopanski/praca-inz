@@ -1,15 +1,15 @@
 import { shallowMount } from "@vue/test-utils";
 import { afterAll, beforeEach, describe, test } from "vitest";
-import Picker from "@/components/Picker/Picker.vue";
+import NotePicker from "@/components/NotePicker/NotePicker.vue";
 
-describe("StopButton", () => {
+describe("NotePicker", () => {
   let wrapper;
 
-  beforeEach(async () => {
-    wrapper = shallowMount(Picker);
+  beforeEach(() => {
+    wrapper = shallowMount(NotePicker);
   });
 
-  afterAll(async () => {
+  afterAll(() => {
     wrapper.unmount();
   });
 

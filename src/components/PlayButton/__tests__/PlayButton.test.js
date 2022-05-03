@@ -1,20 +1,24 @@
 import { shallowMount } from "@vue/test-utils";
 import { afterAll, beforeEach, describe, test } from "vitest";
-import PlayerButton from "@/components/PlayerButton/PlayerButton.vue";
+import PlayButton from "@/components/PlayButton/PlayButton.vue";
 
-describe("StopButton", () => {
+describe("PlayButton", () => {
   let wrapper;
 
-  beforeEach(async () => {
-    wrapper = shallowMount(PlayerButton);
+  beforeEach(() => {
+    wrapper = shallowMount(PlayButton);
   });
 
-  afterAll(async () => {
+  afterAll(() => {
     wrapper.unmount();
   });
 
   test.concurrent("should render itself", () => {
     expect(wrapper).toBeTruthy();
     expect(wrapper.isVisible()).toBe(true);
+  });
+
+  test.concurrent("should handle click event", () => {
+    expect(wrapper.trigger("click")).toBeTruthy();
   });
 });

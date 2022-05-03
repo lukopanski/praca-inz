@@ -1,16 +1,15 @@
 <template>
-  <div>
-    <Picker />
-    <Picker />
-  </div>
-  <div>
-    <PlayPauseButton />
-    <StopButton />
+  <div class="player">
+    <div class="player__buttons">
+      <PlayButton />
+      <PauseButton />
+      <StopButton />
+    </div>
   </div>
 </template>
 
 <script setup>
-import PlayPauseButton from "@/components/PlayPauseButton/PlayPauseButton.vue";
+import PlayButton from "@/components/PlayButton/PlayButton.vue";
+import PauseButton from "@/components/PauseButton/PauseButton.vue";
 import StopButton from "@/components/StopButton/StopButton.vue";
-import Picker from "@/components/Picker/Picker.vue";
 </script>

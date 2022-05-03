@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import useNotes from "@/composables/notes/notes.js";
+import useNotes from "@/composables/useNotes/useNotes.js";
 import { noteName, note } from "@/common/regex/noteValidator";
 
 // think about internationalization of notes

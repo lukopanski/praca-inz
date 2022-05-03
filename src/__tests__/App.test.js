@@ -5,11 +5,11 @@ import App from "@/App.vue";
 describe("App", () => {
   let wrapper;
 
-  beforeEach(async () => {
+  beforeEach(() => {
     wrapper = shallowMount(App);
   });
 
-  afterAll(async () => {
+  afterAll(() => {
     wrapper.unmount();
   });
 

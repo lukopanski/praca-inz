@@ -1,15 +1,15 @@
 import { shallowMount } from "@vue/test-utils";
-import { afterAll, beforeEach, describe, test } from "vitest";
+import { afterAll, beforeEach, describe, test, vi } from "vitest";
 import StopButton from "@/components/StopButton/StopButton.vue";
 
 describe("StopButton", () => {
   let wrapper;
 
-  beforeEach(async () => {
+  beforeEach(() => {
     wrapper = shallowMount(StopButton);
   });
 
-  afterAll(async () => {
+  afterAll(() => {
     wrapper.unmount();
   });
 
